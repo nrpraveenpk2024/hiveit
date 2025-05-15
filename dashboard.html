@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiveMind - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-bee"></i>
+                <h2>HiveMind</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analysis.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Hive Analysis</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#calculator" id="calculatorBtn">
+                            <i class="fas fa-calculator"></i>
+                            <span>Honey Calculator</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Tutorials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="assets/images/user-avatar.jpg" alt="User" id="userAvatar">
+                    <div class="user-info">
+                        <h4 id="username">praveen kumar n r</h4>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                    <div class="breadcrumbs">
+                        <span>Home</span> / <span>Dashboard</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="weather-widget">
+                        <i class="fas fa-sun"></i>
+                        <span>28°C, Sunny</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard content continues... -->
+        </main>
+        
+        <!-- Chatbot Widget -->
+        <div class="chatbot-widget">
+            <button class="chatbot-toggle">
+                <i class="fas fa-robot"></i>
+            </button>
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <h3>HiveMind Assistant</h3>
+                    <button class="chatbot-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="chatbot-messages" id="chatbotMessages">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" id="chatbotInput" placeholder="Ask about beekeeping...">
+                    <button id="chatbotSend">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Calculator Modal -->
+        <div id="calculatorModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <iframe src="calculator.html" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
